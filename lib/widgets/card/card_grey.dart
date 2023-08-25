@@ -10,12 +10,14 @@ class CardGrey extends StatelessWidget {
     required this.child,
     this.width,
     this.padding,
+    this.color,
   }) : super(key: key);
 
   final double height;
   final double? width;
   final Widget child;
   final EdgeInsets? padding;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class CardGrey extends StatelessWidget {
       height: height,
       width: width ?? screenWidth(context),
       decoration: BoxDecoration(
-          color: AssetColors.greyLightes,
+          color: color ?? AssetColors.greyLightes,
           borderRadius: BorderRadius.circular(8)),
       child: child,
     );

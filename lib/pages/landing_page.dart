@@ -4,6 +4,8 @@ import 'package:plta_app/config/asset_colors.dart';
 import 'package:plta_app/config/asset_paths.dart';
 import 'package:plta_app/config/asset_style.dart';
 import 'package:plta_app/config/ui_helper.dart';
+import 'package:plta_app/pages/tab/tab_belum_dikerjakan.dart';
+import 'package:plta_app/pages/tab/tab_sudah_dikerjakan.dart';
 import 'package:plta_app/widgets/card/card_grey.dart';
 import 'package:plta_app/widgets/chip/chip_primary.dart';
 
@@ -45,6 +47,7 @@ class _LandingPageState extends State<LandingPage>
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
+          physics: NeverScrollableScrollPhysics(),
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -136,28 +139,6 @@ class _LandingPageState extends State<LandingPage>
                 ),
               ),
               verticalSpace(24),
-              // Row(
-              //   children: [
-              //     ChipPrimary(
-              //       active: chip[0][0],
-              //       onTap: () {
-              //         setState(() {
-              //           chip[0][0] = !chip[0][0];
-              //         });
-              //       },
-              //       label: chip[0][1],
-              //     ),
-              //     ChipPrimary(
-              //       active: chip[1][0],
-              //       onTap: () {
-              //         setState(() {
-              //           chip[1][0] = !chip[1][0];
-              //         });
-              //       },
-              //       label: chip[1][1],
-              //     ),
-              //   ],
-              // ),
               Container(
                 height: 35,
                 child: Align(
@@ -183,15 +164,14 @@ class _LandingPageState extends State<LandingPage>
                   ),
                 ),
               ),
-              verticalSpace(16),
-              Container(
-                height: screenHeight(context),
-                decoration: BoxDecoration(color: Colors.amber),
+              verticalSpace(28),
+              SizedBox(
+                height: screenHeightPercentage(context) * 0.53,
                 child: TabBarView(
                   controller: _controller,
                   children: [
-                    Text('Belum dikerjakan'),
-                    Text('sudah dikerjakan'),
+                    TabBelumDikerjakan(),
+                    TabSudahDikerjakan(),
                   ],
                 ),
               ),
