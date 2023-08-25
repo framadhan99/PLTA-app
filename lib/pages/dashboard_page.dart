@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:plta_app/config/asset_style.dart';
+import 'package:plta_app/pages/daftar_komponen_page.dart';
 import 'package:plta_app/pages/login_page.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -6,8 +8,9 @@ class DashboardPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> pages = [
-      LoginPage(),
+    List<List> pages = [
+      [LoginPage(), 'Login'],
+      [DaftarKomponen(), 'Daftar komponen']
     ];
     return Scaffold(
       body: ListView.builder(
@@ -17,7 +20,7 @@ class DashboardPage extends StatelessWidget {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => pages[index],
+                  builder: (context) => pages[index][0],
                 ));
           },
           child: Container(
@@ -25,7 +28,12 @@ class DashboardPage extends StatelessWidget {
             height: 50,
             decoration: BoxDecoration(color: Colors.indigo),
             alignment: Alignment.center,
-            child: Text('Login'),
+            child: Text(
+              pages[index][1],
+              style: AssetStyle.primaryText.copyWith(
+                color: Colors.white,
+              ),
+            ),
           ),
         ),
       ),
