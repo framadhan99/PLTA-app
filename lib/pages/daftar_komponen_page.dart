@@ -7,8 +7,8 @@ import 'package:plta_app/widgets/appbar/appbar_primary.dart';
 import 'package:plta_app/widgets/card/card_grey.dart';
 import 'package:plta_app/widgets/card/card_shadow_widget.dart';
 
-class DaftarKomponen extends StatelessWidget {
-  const DaftarKomponen({super.key});
+class DaftarKomponenPage extends StatelessWidget {
+  const DaftarKomponenPage({super.key});
 
   @override
   Widget build(BuildContext context) {

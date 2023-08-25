@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plta_app/config/asset_style.dart';
 import 'package:plta_app/pages/daftar_komponen_page.dart';
+import 'package:plta_app/pages/daftar_sub_komponen_page.dart';
 import 'package:plta_app/pages/login_page.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -10,7 +11,8 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     List<List> pages = [
       [LoginPage(), 'Login'],
-      [DaftarKomponen(), 'Daftar komponen']
+      [DaftarKomponenPage(), 'Daftar komponen'],
+      [DaftarSubKomponenPage(), 'Daftar  Sub komponen'],
     ];
     return Scaffold(
       body: ListView.builder(
