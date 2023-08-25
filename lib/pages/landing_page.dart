@@ -14,7 +14,9 @@ class LandingPage extends StatefulWidget {
   State<LandingPage> createState() => _LandingPageState();
 }
 
-class _LandingPageState extends State<LandingPage> {
+class _LandingPageState extends State<LandingPage>
+    with TickerProviderStateMixin {
+  // TabController _controller = TabController(length: 2, vsync: this);
   List chip = [
     [
       true,
@@ -39,6 +41,7 @@ class _LandingPageState extends State<LandingPage> {
   ];
   @override
   Widget build(BuildContext context) {
+    TabController _controller = TabController(length: 2, vsync: this);
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -133,31 +136,64 @@ class _LandingPageState extends State<LandingPage> {
                 ),
               ),
               verticalSpace(24),
-              Row(
-                children: [
-                  ChipPrimary(
-                    active: chip[0][0],
-                    onTap: () {
-                      setState(() {
-                        chip[0][0] = !chip[0][0];
-                      });
-                    },
-                    label: chip[0][1],
+              // Row(
+              //   children: [
+              //     ChipPrimary(
+              //       active: chip[0][0],
+              //       onTap: () {
+              //         setState(() {
+              //           chip[0][0] = !chip[0][0];
+              //         });
+              //       },
+              //       label: chip[0][1],
+              //     ),
+              //     ChipPrimary(
+              //       active: chip[1][0],
+              //       onTap: () {
+              //         setState(() {
+              //           chip[1][0] = !chip[1][0];
+              //         });
+              //       },
+              //       label: chip[1][1],
+              //     ),
+              //   ],
+              // ),
+              Container(
+                height: 35,
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: TabBar(
+                    controller: _controller,
+                    labelColor: AssetColors.blue,
+                    labelPadding:
+                        EdgeInsets.only(right: 16, left: 16, top: 0, bottom: 0),
+                    isScrollable: true,
+                    unselectedLabelColor: AssetColors.greyLight,
+                    indicator: BoxDecoration(
+                        color: AssetColors.blueLight,
+                        borderRadius: BorderRadius.circular(8)),
+                    tabs: [
+                      Tab(
+                        child: Text('Belum dikerjakan'),
+                      ),
+                      Tab(
+                        child: Text('Sudah dikerjakan'),
+                      ),
+                    ],
                   ),
-                  ChipPrimary(
-                    active: chip[1][0],
-                    onTap: () {
-                      setState(() {
-                        chip[1][0] = !chip[1][0];
-                      });
-                    },
-                    label: chip[1][1],
-                  ),
-                ],
+                ),
               ),
+              verticalSpace(16),
               Container(
                 height: screenHeight(context),
                 decoration: BoxDecoration(color: Colors.amber),
+                child: TabBarView(
+                  controller: _controller,
+                  children: [
+                    Text('Belum dikerjakan'),
+                    Text('sudah dikerjakan'),
+                  ],
+                ),
               ),
             ],
           ),
