@@ -9,4 +9,5 @@ class AssetColors {
   static const Color blueDark = Color(0xFF213FAB);
   static const Color colorButton = Color(0xFF3A5AFF);
   static const Color blue = Color(0xFF3A5AFF);
+  static const Color blueLight = Color(0xffEBEEFF);
 }
