@@ -8,6 +8,7 @@ import 'package:plta_app/pages/tab/tab_belum_dikerjakan.dart';
 import 'package:plta_app/pages/tab/tab_sudah_dikerjakan.dart';
 import 'package:plta_app/widgets/card/card_grey.dart';
 import 'package:plta_app/widgets/chip/chip_primary.dart';
+import 'package:easy_date_timeline/easy_date_timeline.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -126,10 +127,29 @@ class _LandingPageState extends State<LandingPage>
                   )
                 ],
               ),
-              verticalSpace(16),
+              // verticalSpace(16),
               Container(
-                height: 100,
-                decoration: BoxDecoration(color: Colors.grey),
+                height: 160,
+                // decoration: BoxDecoration(color: Colors.grey),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    EasyDateTimeLine(
+                      initialDate: DateTime.now(),
+                      onDateChange: (selectedDate) {
+                        //[selectedDate] the new date selected.
+                      },
+                      dayProps: const EasyDayProps(
+                        dayStructure: DayStructure.dayNumDayStr,
+                        height: 75,
+                        activeDayDecoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(8)),
+                          color: AssetColors.blue,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               verticalSpace(16),
               Text(
