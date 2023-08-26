@@ -7,7 +7,6 @@ import 'package:plta_app/config/ui_helper.dart';
 import 'package:plta_app/pages/tab/tab_belum_dikerjakan.dart';
 import 'package:plta_app/pages/tab/tab_sudah_dikerjakan.dart';
 import 'package:plta_app/widgets/card/card_grey.dart';
-import 'package:plta_app/widgets/chip/chip_primary.dart';
 import 'package:easy_date_timeline/easy_date_timeline.dart';
 
 class LandingPage extends StatefulWidget {

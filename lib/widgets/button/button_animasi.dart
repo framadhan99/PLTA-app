@@ -4,8 +4,8 @@ import 'package:plta_app/config/asset_colors.dart';
 import 'package:plta_app/config/asset_style.dart';
 import 'package:plta_app/config/ui_helper.dart';
 
-class ButtonPrimary extends StatelessWidget {
-  const ButtonPrimary({
+class ButtonAnimasi extends StatelessWidget {
+  const ButtonAnimasi({
     Key? key,
     this.onTap,
     required this.label,
@@ -20,19 +20,20 @@ class ButtonPrimary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: onTap,
-      child: Container(
+      child: Ink(
         height: height ?? 40,
         width: width ?? screenWidth(context),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           color: AssetColors.blue,
         ),
-        alignment: Alignment.center,
-        child: Text(
-          label,
-          style: AssetStyle.primaryText.copyWith(color: Colors.white),
+        child: Center(
+          child: Text(
+            label,
+            style: AssetStyle.primaryText.copyWith(color: Colors.white),
+          ),
         ),
       ),
     );
