@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:plta_app/config/asset_style.dart';
-import 'package:plta_app/pages/detail_location_age.dart';
+import 'package:plta_app/pages/detail_location_offline_page.dart';
+import 'package:plta_app/pages/detail_location_online_page.dart';
 import 'package:plta_app/pages/pin_page.dart';
 import 'package:plta_app/pages/daftar_komponen_page.dart';
 import 'package:plta_app/pages/daftar_sub_komponen_page.dart';
 import 'package:plta_app/pages/landing_page.dart';
 import 'package:plta_app/pages/login_page.dart';
 import 'package:plta_app/pages/riwayat_pemeliharaan_page.dart';
+import 'package:plta_app/pages/sub_komponen_input_page.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -16,11 +18,13 @@ class DashboardPage extends StatelessWidget {
     List<List> pages = [
       [LoginPage(), 'Login'],
       [DaftarKomponenPage(), 'Daftar komponen'],
-      [DaftarSubKomponenPage(), 'Daftar  Sub komponen'],
       [LandingPage(), 'Landing'],
       [PinPage(), 'Pin'],
       [RiwayatPemeliharaanPage(), 'Riwayat Pemeliharaan'],
-      [DetailLocationPage(), 'Detail Location Page'],
+      [DetailLocationOfflinePage(), 'Detail Location offline Page'],
+      [DetailLocationOnlinePage(), 'Detail Location online Page'],
+      [DaftarSubKomponenPage(), 'Daftar  Sub komponen'],
+      [SubKomponenInputPage(), 'Daftar  Sub komponen Input'],
     ];
     return Scaffold(
       body: ListView.builder(

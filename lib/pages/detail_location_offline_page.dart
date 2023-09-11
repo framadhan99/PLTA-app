@@ -8,8 +8,8 @@ import 'package:plta_app/widgets/appbar/appbar_primary.dart';
 import 'package:plta_app/widgets/card/card_grey.dart';
 import 'package:plta_app/widgets/card/card_shadow_widget.dart';
 
-class DetailLocationPage extends StatelessWidget {
-  const DetailLocationPage({super.key});
+class DetailLocationOfflinePage extends StatelessWidget {
+  const DetailLocationOfflinePage({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -7,7 +7,7 @@ import 'package:plta_app/config/ui_helper.dart';
 import 'package:plta_app/widgets/button/button_animasi.dart';
 import 'package:plta_app/widgets/button/button_primary.dart';
 import 'package:plta_app/widgets/card/card_grey.dart';
-import 'package:plta_app/widgets/textfield_general_widget.dart';
+import 'package:plta_app/widgets/texfield/textfield_general_widget.dart';
 
 class PinPage extends StatelessWidget {
   const PinPage({super.key});

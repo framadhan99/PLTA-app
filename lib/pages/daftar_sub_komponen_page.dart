@@ -23,7 +23,7 @@ class DaftarSubKomponenPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -157,7 +157,7 @@ class DaftarSubKomponenPage extends StatelessWidget {
                           ),
                           verticalSpace(12),
                           Text(
-                            'plumber Block',
+                            'Expension Joint',
                             style: AssetStyle.bigTitle.copyWith(fontSize: 12),
                           ),
                           verticalSpace(6),
@@ -171,7 +171,7 @@ class DaftarSubKomponenPage extends StatelessWidget {
                       ),
                       Spacer(),
                       Checkbox(
-                        activeColor: Color(0xffABABAB),
+                        activeColor: AssetColors.green,
                         value: true,
                         onChanged: (e) {},
                       )

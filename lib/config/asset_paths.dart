@@ -6,6 +6,7 @@ class AssetPaths {
   static const String icCloud = "assets/icons/icCloud.svg";
   static const String icDropdown = "assets/icons/icDropdown.svg";
   static const String icAdjustments = "assets/icons/icAdjustments.svg";
+  static const String icCeklis = "assets/icons/icCeklis.svg";
 
   static const String imgMesin = "assets/images/mesin.png";
   static const String imgProfile = "assets/images/imgProfile.png";
