@@ -5,7 +5,6 @@ import 'package:plta_app/config/asset_paths.dart';
 import 'package:plta_app/config/asset_style.dart';
 import 'package:plta_app/config/ui_helper.dart';
 import 'package:plta_app/widgets/appbar/appbar_primary.dart';
-import 'package:plta_app/widgets/button/button_animasi.dart';
 import 'package:plta_app/widgets/button/button_primary.dart';
 import 'package:plta_app/widgets/card/card_grey.dart';
 import 'package:plta_app/widgets/card/card_shadow_widget.dart';

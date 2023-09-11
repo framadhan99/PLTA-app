@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plta_app/config/asset_style.dart';
+import 'package:plta_app/pages/detail_location_age.dart';
 import 'package:plta_app/pages/pin_page.dart';
 import 'package:plta_app/pages/daftar_komponen_page.dart';
 import 'package:plta_app/pages/daftar_sub_komponen_page.dart';
@@ -19,6 +20,7 @@ class DashboardPage extends StatelessWidget {
       [LandingPage(), 'Landing'],
       [PinPage(), 'Pin'],
       [RiwayatPemeliharaanPage(), 'Riwayat Pemeliharaan'],
+      [DetailLocationPage(), 'Detail Location Page'],
     ];
     return Scaffold(
       body: ListView.builder(

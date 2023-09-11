@@ -4,7 +4,6 @@ import 'package:plta_app/config/asset_colors.dart';
 import 'package:plta_app/config/asset_paths.dart';
 import 'package:plta_app/config/asset_style.dart';
 import 'package:plta_app/config/ui_helper.dart';
-import 'package:plta_app/pages/pin_page.dart';
 import 'package:plta_app/widgets/button/button_primary.dart';
 import 'package:plta_app/widgets/textfield_general_widget.dart';
 
