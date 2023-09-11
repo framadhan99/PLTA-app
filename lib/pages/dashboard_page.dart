@@ -5,6 +5,7 @@ import 'package:plta_app/pages/daftar_komponen_page.dart';
 import 'package:plta_app/pages/daftar_sub_komponen_page.dart';
 import 'package:plta_app/pages/landing_page.dart';
 import 'package:plta_app/pages/login_page.dart';
+import 'package:plta_app/pages/riwayat_pemeliharaan_page.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -17,6 +18,7 @@ class DashboardPage extends StatelessWidget {
       [DaftarSubKomponenPage(), 'Daftar  Sub komponen'],
       [LandingPage(), 'Landing'],
       [PinPage(), 'Pin'],
+      [RiwayatPemeliharaanPage(), 'Riwayat Pemeliharaan'],
     ];
     return Scaffold(
       body: ListView.builder(
