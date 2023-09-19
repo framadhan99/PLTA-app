@@ -9,6 +9,7 @@ import 'package:plta_app/pages/daftar_sub_komponen_page.dart';
 import 'package:plta_app/pages/landing_page.dart';
 import 'package:plta_app/pages/login_page.dart';
 import 'package:plta_app/pages/riwayat_pemeliharaan_page.dart';
+import 'package:plta_app/pages/riwayat_perbaikan_page.dart';
 import 'package:plta_app/pages/sub_komponen_input_page.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -27,6 +28,9 @@ class DashboardPage extends StatelessWidget {
       [DaftarSubKomponenPage(), 'Daftar  Sub komponen'],
       [SubKomponenInputPage(), 'Daftar  Sub komponen Input'],
       [DetailLaporanPage(), 'Detail Laporan page'],
+
+      ////////////////////////////////////////////
+      [RiwayatPerbaikanPage(), 'Riwayat Perbaikan page'],
     ];
     return Scaffold(
       body: ListView.builder(
