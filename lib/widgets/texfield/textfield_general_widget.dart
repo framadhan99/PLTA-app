@@ -12,6 +12,7 @@ class TextFieldGeneral extends StatelessWidget {
     this.style,
     this.border,
     this.suffixIcon,
+    this.expands,
   }) : super(key: key);
 
   final String hintText;
@@ -21,12 +22,16 @@ class TextFieldGeneral extends StatelessWidget {
   final TextStyle? style;
   final bool? border;
   final Widget? suffixIcon;
+  final bool? expands;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       obscureText: obscureText ?? false,
       style: style ?? AssetStyle.primaryText,
+      expands: expands ?? false,
+      maxLines: null,
+      textAlignVertical: TextAlignVertical.top,
       textAlign: center ?? false ? TextAlign.center : TextAlign.left,
       decoration: InputDecoration(
         hintText: hintText,

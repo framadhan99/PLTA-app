@@ -11,12 +11,16 @@ class ButtonPrimary extends StatelessWidget {
     required this.label,
     this.width,
     this.height,
+    this.color,
+    this.textColor,
   }) : super(key: key);
 
   final Function()? onTap;
   final String label;
   final double? width;
   final double? height;
+  final Color? color;
+  final Color? textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -27,12 +31,13 @@ class ButtonPrimary extends StatelessWidget {
         width: width ?? screenWidth(context),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
-          color: AssetColors.blue,
+          color: color ?? AssetColors.blue,
         ),
         alignment: Alignment.center,
         child: Text(
           label,
-          style: AssetStyle.primaryText.copyWith(color: Colors.white),
+          style:
+              AssetStyle.primaryText.copyWith(color: textColor ?? Colors.white),
         ),
       ),
     );
