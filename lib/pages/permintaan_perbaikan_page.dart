@@ -9,6 +9,7 @@ import 'package:plta_app/widgets/appbar/appbar_primary.dart';
 import 'package:plta_app/widgets/button/button_primary.dart';
 import 'package:plta_app/widgets/button/button_radio.dart';
 import 'package:plta_app/widgets/card/card_grey.dart';
+import 'package:plta_app/widgets/card/card_shadow_widget.dart';
 import 'package:plta_app/widgets/texfield/textfield_general_widget.dart';
 import 'package:plta_app/widgets/texfield/textfield_search.dart';
 
@@ -31,227 +32,228 @@ class _PermintaanPerbaikanPageState extends State<PermintaanPerbaikanPage> {
       appBar: AppBarPrimary(title: 'Permintaan Perbaikan'),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          children: [
-            Container(
-              height: 100,
-              child: TextFieldGeneral(
-                expands: true,
-                hintText: 'Keterangan Perbaikan',
-              ),
-            ),
-            verticalSpace(16),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              width: screenWidth(context),
-              height: 40,
-              decoration: BoxDecoration(
-                border: Border.all(color: AssetColors.greyLight),
-                borderRadius: BorderRadius.circular(4),
-              ),
-              child: Row(
-                children: [
-                  Text(
-                    'Pilih Departemen Terkait',
-                    style: AssetStyle.primaryText,
-                  ),
-                  Spacer(),
-                  SvgPicture.asset(
-                    AssetPaths.icDropdown,
-                    width: 18,
-                  )
-                ],
-              ),
-            ),
-            verticalSpace(8),
-            Row(
-              children: [
-                Icon(
-                  Icons.add,
-                  size: 16,
-                  color: AssetColors.blue,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                height: 100,
+                child: TextFieldGeneral(
+                  expands: true,
+                  hintText: 'Keterangan Perbaikan',
                 ),
-                horizontalSpace(4),
-                Text(
-                  'Tambah Departemen',
-                  style: AssetStyle.primaryText.copyWith(
-                    fontSize: 10,
+              ),
+              verticalSpace(16),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 16),
+                width: screenWidth(context),
+                height: 40,
+                decoration: BoxDecoration(
+                  border: Border.all(color: AssetColors.greyLight),
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: Row(
+                  children: [
+                    Text(
+                      'Pilih Departemen Terkait',
+                      style: AssetStyle.primaryText,
+                    ),
+                    Spacer(),
+                    SvgPicture.asset(
+                      AssetPaths.icDropdown,
+                      width: 18,
+                    )
+                  ],
+                ),
+              ),
+              verticalSpace(8),
+              Row(
+                children: [
+                  Icon(
+                    Icons.add,
+                    size: 16,
                     color: AssetColors.blue,
                   ),
+                  horizontalSpace(4),
+                  Text(
+                    'Tambah Departemen',
+                    style: AssetStyle.primaryText.copyWith(
+                      fontSize: 10,
+                      color: AssetColors.blue,
+                    ),
+                  ),
+                ],
+              ),
+              verticalSpace(16),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 16),
+                width: screenWidth(context),
+                height: 40,
+                decoration: BoxDecoration(
+                  border: Border.all(color: AssetColors.greyLight),
+                  borderRadius: BorderRadius.circular(4),
                 ),
-              ],
-            ),
-            verticalSpace(16),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              width: screenWidth(context),
-              height: 40,
-              decoration: BoxDecoration(
-                border: Border.all(color: AssetColors.greyLight),
-                borderRadius: BorderRadius.circular(4),
+                child: Row(
+                  children: [
+                    Text(
+                      'Pilih Prioritas',
+                      style: AssetStyle.primaryText,
+                    ),
+                    Spacer(),
+                    SvgPicture.asset(
+                      AssetPaths.icDropdown,
+                      width: 18,
+                    )
+                  ],
+                ),
               ),
-              child: Row(
-                children: [
-                  Text(
-                    'Pilih Prioritas',
-                    style: AssetStyle.primaryText,
-                  ),
-                  Spacer(),
-                  SvgPicture.asset(
-                    AssetPaths.icDropdown,
-                    width: 18,
-                  )
-                ],
+              verticalSpace(16),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 16),
+                width: screenWidth(context),
+                height: 60,
+                decoration: BoxDecoration(
+                  border: Border.all(color: AssetColors.greyLight),
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Lock Tipe Perbaikan',
+                          style: AssetStyle.primaryText,
+                        ),
+                        verticalSpace(8),
+                        Text(
+                          'Aktifkan jika mmenggunakan Lock Out Tag Out',
+                          style: AssetStyle.desText.copyWith(fontSize: 10),
+                        ),
+                      ],
+                    ),
+                    Spacer(),
+                    CupertinoSwitch(
+                      activeColor: AssetColors.blue,
+                      value: true,
+                      onChanged: (e) {},
+                    )
+                  ],
+                ),
               ),
-            ),
-            verticalSpace(16),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              width: screenWidth(context),
-              height: 60,
-              decoration: BoxDecoration(
-                border: Border.all(color: AssetColors.greyLight),
-                borderRadius: BorderRadius.circular(4),
+              verticalSpace(16),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                width: screenWidth(context),
+                height: 100,
+                decoration: BoxDecoration(
+                  border: Border.all(color: AssetColors.greyLight),
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Pilih Tipe Perbaikan',
+                      style: AssetStyle.primaryText,
+                    ),
+                    verticalSpace(8),
+                    Row(
+                      children: [
+                        RadioButton(
+                          selected: selected[0][1],
+                          label: selected[0][0],
+                          onTap: () {
+                            setState(() {
+                              selected[0][1] = !selected[0][1];
+                            });
+                          },
+                        ),
+                        Spacer(),
+                        RadioButton(
+                          selected: selected[1][1],
+                          label: selected[1][0],
+                          onTap: () {
+                            setState(() {
+                              selected[1][1] = !selected[1][1];
+                            });
+                          },
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-              child: Row(
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Lock Tipe Perbaikan',
-                        style: AssetStyle.primaryText,
-                      ),
-                      verticalSpace(8),
-                      Text(
-                        'Aktifkan jika mmenggunakan Lock Out Tag Out',
-                        style: AssetStyle.desText.copyWith(fontSize: 10),
-                      ),
-                    ],
-                  ),
-                  Spacer(),
-                  CupertinoSwitch(
-                    activeColor: AssetColors.blue,
-                    value: true,
-                    onChanged: (e) {},
-                  )
-                ],
+              verticalSpace(16),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 16),
+                width: screenWidth(context),
+                height: 40,
+                decoration: BoxDecoration(
+                  border: Border.all(color: AssetColors.greyLight),
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: Row(
+                  children: [
+                    Text(
+                      'Mesin T1',
+                      style: AssetStyle.primaryText,
+                    ),
+                    Spacer(),
+                    SvgPicture.asset(
+                      AssetPaths.icDropdown,
+                      width: 18,
+                    )
+                  ],
+                ),
               ),
-            ),
-            verticalSpace(16),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-              width: screenWidth(context),
-              height: 100,
-              decoration: BoxDecoration(
-                border: Border.all(color: AssetColors.greyLight),
-                borderRadius: BorderRadius.circular(4),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Pilih Tipe Perbaikan',
-                    style: AssetStyle.primaryText,
-                  ),
-                  verticalSpace(8),
-                  Row(
-                    children: [
-                      RadioButton(
-                        selected: selected[0][1],
-                        label: selected[0][0],
-                        onTap: () {
-                          setState(() {
-                            selected[0][1] = !selected[0][1];
-                          });
-                        },
-                      ),
-                      Spacer(),
-                      RadioButton(
-                        selected: selected[1][1],
-                        label: selected[1][0],
-                        onTap: () {
-                          setState(() {
-                            selected[1][1] = !selected[1][1];
-                          });
-                        },
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            verticalSpace(16),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              width: screenWidth(context),
-              height: 40,
-              decoration: BoxDecoration(
-                border: Border.all(color: AssetColors.greyLight),
-                borderRadius: BorderRadius.circular(4),
-              ),
-              child: Row(
-                children: [
-                  Text(
-                    'Mesin T1',
-                    style: AssetStyle.primaryText,
-                  ),
-                  Spacer(),
-                  SvgPicture.asset(
-                    AssetPaths.icDropdown,
-                    width: 18,
-                  )
-                ],
-              ),
-            ),
-            verticalSpace(16),
-            GestureDetector(
-              onTap: () {
-                showDialog(
-                  context: context,
-                  builder: (context) {
-                    return Dialog(
-                      insetPadding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 16),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16)),
-                      child: Container(
-                        padding: EdgeInsets.all(16),
-                        height: screenHeightPercentage(context) * 0.8,
-                        width: screenWidth(context),
-                        child: Column(
-                          children: [
-                            Align(
-                              alignment: Alignment.topLeft,
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.pop(context);
-                                },
-                                child: Icon(
-                                  Icons.close,
+              verticalSpace(16),
+              GestureDetector(
+                onTap: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return Dialog(
+                        insetPadding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 16),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16)),
+                        child: Container(
+                          padding: EdgeInsets.all(16),
+                          height: screenHeightPercentage(context) * 0.8,
+                          width: screenWidth(context),
+                          child: Column(
+                            children: [
+                              Align(
+                                alignment: Alignment.topLeft,
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Icon(
+                                    Icons.close,
+                                  ),
                                 ),
                               ),
-                            ),
-                            verticalSpace(16),
-                            const Text(
-                              'Pilih Komponen / Sub Komponen',
-                              style: AssetStyle.bigTitle,
-                            ),
-                            verticalSpace(16),
-                            TextFieldSearch(),
-                            verticalSpace(16),
-                            Container(
-                              height: screenHeightPercentage(context) * 0.59,
-                              child: SingleChildScrollView(
-                                child: Column(
-                                  children: [
-                                    ...List.generate(
-                                      10,
-                                      (int index) => Padding(
-                                        padding:
-                                            const EdgeInsets.only(bottom: 16),
-                                        child: CardGrey(
+                              verticalSpace(16),
+                              const Text(
+                                'Pilih Komponen / Sub Komponen',
+                                style: AssetStyle.bigTitle,
+                              ),
+                              verticalSpace(16),
+                              TextFieldSearch(),
+                              verticalSpace(16),
+                              Container(
+                                height: screenHeightPercentage(context) * 0.59,
+                                child: SingleChildScrollView(
+                                  child: Column(
+                                    children: [
+                                      ...List.generate(
+                                        10,
+                                        (int index) => Padding(
+                                          padding:
+                                              const EdgeInsets.only(bottom: 16),
+                                          child: CardGrey(
                                             padding: const EdgeInsets.symmetric(
                                               horizontal: 16,
                                               vertical: 16,
@@ -275,51 +277,142 @@ class _PermintaanPerbaikanPageState extends State<PermintaanPerbaikanPage> {
                                                   style: AssetStyle.desText,
                                                 ),
                                               ],
-                                            )),
+                                            ),
+                                          ),
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  );
+                },
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  width: screenWidth(context),
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: AssetColors.greyLightes,
+                    border: Border.all(
+                      color: AssetColors.greyLight,
+                      style: BorderStyle.none,
+                    ),
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.add,
+                        size: 20,
+                        color: AssetColors.greyLight,
+                      ),
+                      horizontalSpace(8),
+                      Text(
+                        'Tambah Komponen / Sub Komponen',
+                        style: AssetStyle.primaryText.copyWith(
+                          color: AssetColors.greyLight,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              verticalSpace(16),
+              ...List.generate(
+                10,
+                (index) => CardShadow(
+                  height: 190,
+                  width: screenWidth(context),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Draft Tube Manholes',
+                                style: AssetStyle.primaryText.copyWith(
+                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
-                            )
+                              verticalSpace(4),
+                              Text(
+                                'Mesin T1',
+                                style:
+                                    AssetStyle.desText.copyWith(fontSize: 10),
+                              ),
+                            ],
+                          ),
+                          Spacer(),
+                          Container(
+                            padding: EdgeInsets.all(4),
+                            height: 20,
+                            width: 20,
+                            decoration: BoxDecoration(
+                              color: AssetColors.redLight,
+                            ),
+                            child: SvgPicture.asset(
+                              AssetPaths.icDelete,
+                            ),
+                          )
+                        ],
+                      ),
+                      verticalSpace(16),
+                      Container(
+                        padding: EdgeInsets.only(left: 16, right: 8),
+                        width: screenWidth(context),
+                        height: 40,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: AssetColors.greyLight),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Row(
+                          children: [
+                            Text(
+                              'Foto Komponen / Sub Komponen',
+                              style: AssetStyle.primaryText.copyWith(
+                                fontSize: 12,
+                              ),
+                            ),
+                            Spacer(),
+                            Container(
+                              margin: EdgeInsets.only(top: 6, bottom: 6),
+                              width: 100,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4),
+                                color: AssetColors.blue,
+                              ),
+                              alignment: Alignment.center,
+                              child: Text(
+                                'Unggah Foto',
+                                style: AssetStyle.primaryText.copyWith(
+                                    color: Colors.white, fontSize: 12),
+                              ),
+                            ),
                           ],
                         ),
                       ),
-                    );
-                  },
-                );
-              },
-              child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16),
-                width: screenWidth(context),
-                height: 40,
-                decoration: BoxDecoration(
-                  color: AssetColors.greyLightes,
-                  border: Border.all(
-                    color: AssetColors.greyLight,
-                    style: BorderStyle.none,
+                      verticalSpace(16),
+                      TextFieldGeneral(
+                        hintText: 'Keterangan Perbaikan',
+                        hintStyle: AssetStyle.primaryText.copyWith(
+                          fontSize: 12,
+                        ),
+                      )
+                    ],
                   ),
-                  borderRadius: BorderRadius.circular(4),
-                ),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.add,
-                      size: 20,
-                      color: AssetColors.greyLight,
-                    ),
-                    horizontalSpace(8),
-                    Text(
-                      'Tambah Komponen / Sub Komponen',
-                      style: AssetStyle.primaryText.copyWith(
-                        color: AssetColors.greyLight,
-                      ),
-                    ),
-                  ],
                 ),
               ),
-            ),
-          ],
+              verticalSpace(60)
+            ],
+          ),
         ),
       ),
       bottomSheet: Container(

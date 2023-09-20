@@ -15,4 +15,6 @@ class AssetColors {
   static const Color orange = Color(0xFFF68E12);
   static const Color greenLight = Color(0xFFF3F9F2);
   static const Color green = Color(0xFF4AD334);
+  static const Color redLight = Color(0xFFFFEFEF);
+  static const Color red = Color(0xFFEA5858);
 }
