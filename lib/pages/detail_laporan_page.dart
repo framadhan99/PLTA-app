@@ -132,7 +132,7 @@ class _DetailLaporanPageState extends State<DetailLaporanPage> {
                               children: [
                                 CardGrey(
                                   height:
-                                      screenHeightPercentage(context) * 0.43,
+                                      screenHeightPercentage(context) * 0.44,
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,

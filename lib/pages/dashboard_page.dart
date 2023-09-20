@@ -3,6 +3,7 @@ import 'package:plta_app/config/asset_style.dart';
 import 'package:plta_app/pages/detail_laporan_page.dart';
 import 'package:plta_app/pages/detail_location_offline_page.dart';
 import 'package:plta_app/pages/detail_location_online_page.dart';
+import 'package:plta_app/pages/detail_perbaikan_menunggu_page.dart';
 import 'package:plta_app/pages/permintaan_perbaikan_page.dart';
 import 'package:plta_app/pages/pin_page.dart';
 import 'package:plta_app/pages/daftar_komponen_page.dart';
@@ -33,6 +34,10 @@ class DashboardPage extends StatelessWidget {
       ////////////////////////////////////////////
       [RiwayatPerbaikanPage(), 'Riwayat Perbaikan page'],
       [PermintaanPerbaikanPage(), 'Permintaan Perbaikan page'],
+      [
+        DetailPerbaikanMenungguPersetujuanPage(),
+        'Permintaan Perbaikan Menunggu persetujuan page'
+      ],
     ];
     return Scaffold(
       body: ListView.builder(
