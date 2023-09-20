@@ -17,6 +17,7 @@ import 'package:plta_app/pages/login_page.dart';
 import 'package:plta_app/pages/riwayat_pemeliharaan_page.dart';
 import 'package:plta_app/pages/riwayat_perbaikan_page.dart';
 import 'package:plta_app/pages/sub_komponen_input_page.dart';
+import 'package:plta_app/pages/swp_page.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -55,6 +56,7 @@ class DashboardPage extends StatelessWidget {
         'Permintaan Perbaikan Menunggu Proses page'
       ],
       [CatatanAktivitasPage(), 'Catatan Aktivitas page'],
+      [SWPPage(), 'Safety Work Permit page'],
     ];
     return Scaffold(
       body: ListView.builder(
