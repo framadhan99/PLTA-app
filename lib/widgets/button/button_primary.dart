@@ -13,6 +13,7 @@ class ButtonPrimary extends StatelessWidget {
     this.height,
     this.color,
     this.textColor,
+    this.labelStyle,
   }) : super(key: key);
 
   final Function()? onTap;
@@ -21,6 +22,7 @@ class ButtonPrimary extends StatelessWidget {
   final double? height;
   final Color? color;
   final Color? textColor;
+  final TextStyle? labelStyle;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +38,7 @@ class ButtonPrimary extends StatelessWidget {
         alignment: Alignment.center,
         child: Text(
           label,
-          style:
+          style: labelStyle ??
               AssetStyle.primaryText.copyWith(color: textColor ?? Colors.white),
         ),
       ),

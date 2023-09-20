@@ -9,8 +9,8 @@ import 'package:plta_app/widgets/button/button_primary.dart';
 import 'package:plta_app/widgets/card/card_grey.dart';
 import 'package:plta_app/widgets/card/card_shadow_widget.dart';
 
-class DetailPerbaikanEksekusiPage extends StatelessWidget {
-  const DetailPerbaikanEksekusiPage({super.key});
+class DetailPerbaikanProsesPage extends StatelessWidget {
+  const DetailPerbaikanProsesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,17 +32,18 @@ class DetailPerbaikanEksekusiPage extends StatelessWidget {
                         style: AssetStyle.bigTitle.copyWith(fontSize: 14),
                       ),
                       Spacer(),
-                      CardGrey(
-                        color: AssetColors.greenLight,
-                        padding: EdgeInsets.all(4),
+                      Container(
+                        width: 85,
                         height: 20,
-                        width: 80,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(4),
+                          color: Color(0xff41A8DC),
+                        ),
+                        alignment: Alignment.center,
                         child: Text(
-                          'Siap Eksekusi',
-                          style: AssetStyle.primaryText.copyWith(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 10,
-                              color: AssetColors.green),
+                          'Dalam Proses',
+                          style: AssetStyle.primaryText
+                              .copyWith(color: Colors.white, fontSize: 10),
                         ),
                       ),
                     ],
@@ -103,14 +104,14 @@ class DetailPerbaikanEksekusiPage extends StatelessWidget {
                         flex: 1,
                         child: CardShadow(
                           padding: EdgeInsets.only(left: 6, right: 6),
-                          height: 50,
+                          height: 30,
                           width: screenWidth(context),
                           child: Row(
                             children: [
                               Text(
                                 'Lihat Safety Work Permit',
                                 style: AssetStyle.primaryText.copyWith(
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w500,
                                   fontSize: 12,
                                   color: AssetColors.blue,
                                 ),
@@ -130,14 +131,14 @@ class DetailPerbaikanEksekusiPage extends StatelessWidget {
                         flex: 1,
                         child: CardShadow(
                           padding: EdgeInsets.only(left: 6, right: 6),
-                          height: 50,
+                          height: 30,
                           width: screenWidth(context),
                           child: Row(
                             children: [
                               Text(
                                 'Lihat Work Permit',
                                 style: AssetStyle.primaryText.copyWith(
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w500,
                                   fontSize: 12,
                                   color: AssetColors.blue,
                                 ),
@@ -191,6 +192,31 @@ class DetailPerbaikanEksekusiPage extends StatelessWidget {
                         fontSize: 10,
                         color: AssetColors.red),
                   ),
+                  verticalSpace(16),
+                  CardShadow(
+                    color: AssetColors.blueLight,
+                    padding: EdgeInsets.only(left: 16, right: 16),
+                    height: 30,
+                    width: screenWidth(context),
+                    child: Row(
+                      children: [
+                        Text(
+                          'Catatan Aktifitas',
+                          style: AssetStyle.primaryText.copyWith(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 12,
+                            color: AssetColors.blue,
+                          ),
+                        ),
+                        Spacer(),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 14,
+                          color: AssetColors.blue,
+                        )
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -204,65 +230,71 @@ class DetailPerbaikanEksekusiPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
-                  CardShadow(
-                    height: 130,
-                    width: screenWidth(context),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'KMP-02001',
-                          style: AssetStyle.desText.copyWith(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 12,
-                          ),
-                        ),
-                        verticalSpace(4),
-                        Text(
-                          'Turbin & Expansion Join',
-                          style: AssetStyle.primaryText.copyWith(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 12,
-                          ),
-                        ),
-                        verticalSpace(8),
-                        Text(
-                          'Perlu diperbaiki lebih lanjut',
-                          style: AssetStyle.primaryText.copyWith(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 12,
-                          ),
-                        ),
-                        verticalSpace(8),
-                        CardGrey(
-                          padding: EdgeInsets.only(right: 8, left: 8),
-                          height: 25,
-                          child: Row(
-                            children: [
-                              SvgPicture.asset(
-                                AssetPaths.icImage,
-                                width: 16,
+                  ...List.generate(
+                    10,
+                    (index) => Padding(
+                      padding: const EdgeInsets.only(bottom: 16),
+                      child: CardShadow(
+                        height: 130,
+                        width: screenWidth(context),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'KMP-02001',
+                              style: AssetStyle.desText.copyWith(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 12,
                               ),
-                              horizontalSpace(6),
-                              Text(
-                                'IMG-00409001.jpg',
-                                style: AssetStyle.desText.copyWith(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 10,
-                                ),
+                            ),
+                            verticalSpace(4),
+                            Text(
+                              'Turbin & Expansion Join',
+                              style: AssetStyle.primaryText.copyWith(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 12,
                               ),
-                              Spacer(),
-                              Text(
-                                'Lihat Foto',
-                                style: AssetStyle.desText.copyWith(
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 10,
-                                    color: AssetColors.blue),
+                            ),
+                            verticalSpace(8),
+                            Text(
+                              'Perlu diperbaiki lebih lanjut',
+                              style: AssetStyle.primaryText.copyWith(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 12,
                               ),
-                            ],
-                          ),
-                        )
-                      ],
+                            ),
+                            verticalSpace(8),
+                            CardGrey(
+                              padding: EdgeInsets.only(right: 8, left: 8),
+                              height: 25,
+                              child: Row(
+                                children: [
+                                  SvgPicture.asset(
+                                    AssetPaths.icImage,
+                                    width: 16,
+                                  ),
+                                  horizontalSpace(6),
+                                  Text(
+                                    'IMG-00409001.jpg',
+                                    style: AssetStyle.desText.copyWith(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                                  Spacer(),
+                                  Text(
+                                    'Lihat Foto',
+                                    style: AssetStyle.desText.copyWith(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 10,
+                                        color: AssetColors.blue),
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                   verticalSpace(16),
@@ -309,11 +341,9 @@ class DetailPerbaikanEksekusiPage extends StatelessWidget {
         height: 50,
         child: Center(
           child: ButtonPrimary(
-            width: 250,
+            width: 160,
             height: 30,
-            label: 'LAKUKAN EKSEKUSI PERBAIKAN',
-            labelStyle: AssetStyle.primaryText.copyWith(
-                fontWeight: FontWeight.w500, fontSize: 12, color: Colors.white),
+            label: 'Selesai Perbaikan',
           ),
         ),
       ),

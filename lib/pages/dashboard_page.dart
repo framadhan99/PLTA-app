@@ -6,6 +6,7 @@ import 'package:plta_app/pages/detail_location_online_page.dart';
 import 'package:plta_app/pages/detail_perbaikan/detail_eksekusi_page.dart';
 import 'package:plta_app/pages/detail_perbaikan/detail_perbaikan_menunggu_page.dart';
 import 'package:plta_app/pages/detail_perbaikan/detail_perbaikan_permintaan_page.dart';
+import 'package:plta_app/pages/detail_perbaikan/detail_perbaikan_proses_page.dart';
 import 'package:plta_app/pages/permintaan_perbaikan_page.dart';
 import 'package:plta_app/pages/pin_page.dart';
 import 'package:plta_app/pages/daftar_komponen_page.dart';
@@ -47,6 +48,10 @@ class DashboardPage extends StatelessWidget {
       [
         DetailPerbaikanEksekusiPage(),
         'Permintaan Perbaikan Siap Eksekusi page'
+      ],
+      [
+        DetailPerbaikanProsesPage(),
+        'Permintaan Perbaikan Menunggu Proses page'
       ],
     ];
     return Scaffold(

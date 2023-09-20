@@ -7,12 +7,14 @@ class CardShadow extends StatelessWidget {
     required this.width,
     required this.child,
     this.padding,
+    this.color,
   }) : super(key: key);
 
   final double height;
   final double width;
   final Widget child;
   final EdgeInsets? padding;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class CardShadow extends StatelessWidget {
       height: height,
       width: width,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: color ?? Colors.white,
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
