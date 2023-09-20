@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plta_app/config/asset_style.dart';
+import 'package:plta_app/pages/catatan_aktivitas_page.dart';
 import 'package:plta_app/pages/detail_laporan_page.dart';
 import 'package:plta_app/pages/detail_location_offline_page.dart';
 import 'package:plta_app/pages/detail_location_online_page.dart';
@@ -53,6 +54,7 @@ class DashboardPage extends StatelessWidget {
         DetailPerbaikanProsesPage(),
         'Permintaan Perbaikan Menunggu Proses page'
       ],
+      [CatatanAktivitasPage(), 'Catatan Aktivitas page'],
     ];
     return Scaffold(
       body: ListView.builder(
