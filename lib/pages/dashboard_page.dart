@@ -16,6 +16,7 @@ import 'package:plta_app/pages/landing_page.dart';
 import 'package:plta_app/pages/login_page.dart';
 import 'package:plta_app/pages/riwayat_pemeliharaan_page.dart';
 import 'package:plta_app/pages/riwayat_perbaikan_page.dart';
+import 'package:plta_app/pages/riwayat_status_page.dart';
 import 'package:plta_app/pages/sub_komponen_input_page.dart';
 import 'package:plta_app/pages/swp_page.dart';
 import 'package:plta_app/pages/wp_page.dart';
@@ -59,6 +60,7 @@ class DashboardPage extends StatelessWidget {
       [CatatanAktivitasPage(), 'Catatan Aktivitas page'],
       [SWPPage(), 'Safety Work Permit page'],
       [WPPage(), 'Work Permit page'],
+      [RiwayatStatusPage(), 'Riwayat Status page'],
     ];
     return Scaffold(
       body: ListView.builder(

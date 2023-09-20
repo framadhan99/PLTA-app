@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.7
   easy_date_timeline: ^0.0.7
-  readmore: ^2.1.0
+  timelines:
 
 dev_dependencies:
   flutter_test:
