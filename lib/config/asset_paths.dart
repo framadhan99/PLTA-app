@@ -8,6 +8,7 @@ class AssetPaths {
   static const String icAdjustments = "assets/icons/icAdjustments.svg";
   static const String icCeklis = "assets/icons/icCeklis.svg";
   static const String icDelete = "assets/icons/icDelete.svg";
+  static const String icImage = "assets/icons/icImage.svg";
 
   static const String imgMesin = "assets/images/mesin.png";
   static const String imgProfile = "assets/images/imgProfile.png";
