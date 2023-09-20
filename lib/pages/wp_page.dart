@@ -6,14 +6,14 @@ import 'package:plta_app/config/ui_helper.dart';
 import 'package:plta_app/widgets/appbar/appbar_primary.dart';
 import 'package:plta_app/widgets/card/card_grey.dart';
 
-class SWPPage extends StatelessWidget {
-  const SWPPage({super.key});
+class WPPage extends StatelessWidget {
+  const WPPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBarPrimary(title: 'Safety Work Permit'),
+      appBar: AppBarPrimary(title: 'Work Permit'),
       body: SingleChildScrollView(
         child: Column(
           children: [
